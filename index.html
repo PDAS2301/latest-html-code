@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <p>Application Form Saved Successfully!</p>
+        </div>
+    </div>
+       <div id="successPopup1" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <p>Application Reset Successfully!</p>
+        </div>
+    </div>
+
+    
+    
+    <div class="form-section">
+        <h1>Applications Form</h1>
+        
+        <form id="applicationForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="appName">Application Name</label>
+                    <input type="text" id="appName" name="appName">
+                    <div id="appNameError" class="error">Please fill the application form</div>
+                </div>
+                <div class="form-group">
+                    <label for="appType">Application Type</label>
+                    <select id="appType" name="appType">
+                        <option value="">Select Type</option>
+                        <option value="COTS">COTS</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                    <div id="appTypeError" class="error">Please select an application type</div>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="email" id="contact" name="contact">
+                    <div id="contactError" class="error">Please fill the application form</div>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+                <button type="submit" class="save-btn" id="saveBtn">Save</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="grid-section">
+        <h2>Applications List</h2>
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>Application Name</th>
+                    <th>Application Type</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <footer class="app-footer">
+        <h6>Created by Priyadarshini Das</h6>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
